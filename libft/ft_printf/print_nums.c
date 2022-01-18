@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:15:14 by ngobert           #+#    #+#             */
-/*   Updated: 2021/11/29 15:41:47 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/18 10:12:56 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,6 @@ void	ft_putnbr_base(unsigned int nb, char *base)
 	unsigned int	nbr;
 
 	nbr = nb;
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nbr = nbr * -1;
-	}
 	if (nbr >= 16)
 		ft_putnbr_base((nbr / 16), base);
 	ft_putchar(base[nbr % 16]);

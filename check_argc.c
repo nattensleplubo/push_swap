@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 10:10:07 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/18 09:43:14 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/18 09:55:31 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,9 @@ int	check_double(int argc, char **argv) // j -> va tout le temps se remettre a 1
 // int	check_args(int argc, char **argv)
 // {
 // 	//argc++;
-// 	if (check_if_num(argc, argv) == 1 && check_double(argc, argv) == 1)
+// 	if (check_minmax(argc, argv) == -1)
+// 		return (-1);
+// 	if (check_if_num(argc, argv) == -1 && check_double(argc, argv) == -1)
 // 		return (-1);
 // 	return (1);
 // }

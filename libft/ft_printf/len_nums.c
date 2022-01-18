@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 12:13:39 by ngobert           #+#    #+#             */
-/*   Updated: 2021/11/29 15:22:01 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/18 10:10:33 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_len_unsigned(unsigned int n)
 {
 	int	i;
 
-	i = (n < 0);
+	i = 0;
 	if (n == 0)
 		return (1);
 	while (n != 0)
