@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 10:10:07 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/18 15:29:00 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/18 15:31:14 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ int	check_double(int argc, char **argv)
 	int	i;
 	int	j;
 	int	temp;
-	
+
 	i = 1;
 	while (i < argc)
 	{
