@@ -6,6 +6,8 @@ CC			=	gcc
 RM			=	rm -rf
 CFLAGS		=	-Wall -Wextra -Werror -I.
 
+LIB_PATH = ./libft/libft.a
+
 %.o: %.c
 			$(CC) $(CFLAGS) 
 
@@ -16,8 +18,7 @@ all:		$(NAME)
 $(NAME):	
 		make -C libft/ bonus
 		make -C libft/ft_printf/
-		$(OBJS)
-		$(CC) $(CFLAGS) -o $(OBJS) $(NAME)
+		$(CC) $(CFLAGS) $(SRCS) $(LIB_PATH) -o $(NAME)
 
 clean:
 			make -C libft/ fclean

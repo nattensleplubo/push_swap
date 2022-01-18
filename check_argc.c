@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 10:10:07 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/18 09:55:31 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/18 13:39:23 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	check_if_num(int argc, char **argv)
 	return (1);
 }
 
-int	check_double(int argc, char **argv) // j -> va tout le temps se remettre a 1             i -> le chiffre sur lequel on est
+int	check_double(int argc, char **argv)
 {
 	int	i;
 	int	j;
@@ -71,7 +71,6 @@ int	check_double(int argc, char **argv) // j -> va tout le temps se remettre a 1
 			temp = ft_atoi(argv[i]);
 			if (i == j)
 				j++;
-			//printf("%d %d %s\n", j, argc, argv[j]);
 			if (argv[j] != NULL && temp == ft_atoi(argv[j]))
 				return (-1);
 			j++;
