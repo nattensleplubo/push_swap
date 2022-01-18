@@ -6,7 +6,7 @@ CC			=	gcc
 RM			=	rm -rf
 CFLAGS		=	-Wall -Wextra -Werror -I.
 
-LIB_PATH = ./libft/libft.a
+LIB_PATH = ./libft/libft.a ./libft/ft_printf/libftprintf.a
 
 %.o: %.c
 			$(CC) $(CFLAGS) 

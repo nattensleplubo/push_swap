@@ -6,17 +6,11 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 10:10:07 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/18 14:13:54 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/18 15:29:00 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-# define bite print_bite();
-
-void	print_bite(void)
-{
-	printf("BITE!!!!!\n");
-}
 
 int	check_limits(int argc, char **argv)
 {
@@ -102,19 +96,11 @@ int	check_double(int argc, char **argv)
 	return (1);
 }
 
-// int	check_args(int argc, char **argv)
-// {
-// 	if (check_if_num(argc, argv) == -1 && check_double(argc, argv) == -1)
-// 		return (-1);
-// 	if (check_limits(argc, argv) == -1)
-// 		return (-1);
-// 	return (1);
-// }
-
-int	main(int argc, char **argv)
+int	check_args(int argc, char **argv)
 {
-	int	i = check_limits(argc, argv);
-	//int	j = check_double(argc, argv);
-	//printf("Check if num : %d\nCheck if doubles : %d\n", i, j);
-	printf("%d\n", i);
+	if (check_if_num(argc, argv) == -1 || check_double(argc, argv) == -1)
+		return (ft_printf("Arguments error\n"), -1);
+	if (check_limits(argc, argv) == -1)
+		return (ft_printf("Arguments error\n"), -1);
+	return (1);
 }
