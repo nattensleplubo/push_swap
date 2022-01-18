@@ -6,13 +6,14 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 10:10:07 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/17 16:34:48 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/18 09:43:14 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#define bite print_bite();
 
-void	bite(void)
+void	print_bite(void)
 {
 	printf("BITE!!!!!\n");
 }
@@ -72,7 +73,7 @@ int	check_double(int argc, char **argv) // j -> va tout le temps se remettre a 1
 				j++;
 			//printf("%d %d %s\n", j, argc, argv[j]);
 			if (argv[j] != NULL && temp == ft_atoi(argv[j]))
-				return (printf("Temp : %d\n", temp), -1);
+				return (-1);
 			j++;
 		}
 		i++;
