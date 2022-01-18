@@ -6,16 +6,38 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 10:10:07 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/18 13:39:23 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/18 14:13:54 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#define bite print_bite();
+# define bite print_bite();
 
 void	print_bite(void)
 {
 	printf("BITE!!!!!\n");
+}
+
+int	check_limits(int argc, char **argv)
+{
+	int		i;
+	long	imin;
+	long	imax;
+
+	i = 1;
+	imin = -2147483648;
+	imax = 2147483647;
+	while (i < argc)
+	{
+		if (ft_strlen(argv[i]) > 12 && argv[i][0] == '-')
+			return (-1);
+		else if (ft_strlen(argv[i]) > 11)
+			return (-1);
+		if (ft_atol(argv[i]) > imax || ft_atol(argv[i]) < imin)
+			return (-1);
+		i++;
+	}
+	return (1);
 }
 
 int	is_c(char c, char *charset)
@@ -82,17 +104,16 @@ int	check_double(int argc, char **argv)
 
 // int	check_args(int argc, char **argv)
 // {
-// 	//argc++;
-// 	if (check_minmax(argc, argv) == -1)
-// 		return (-1);
 // 	if (check_if_num(argc, argv) == -1 && check_double(argc, argv) == -1)
+// 		return (-1);
+// 	if (check_limits(argc, argv) == -1)
 // 		return (-1);
 // 	return (1);
 // }
 
 int	main(int argc, char **argv)
 {
-	int	i = check_double(argc, argv);
+	int	i = check_limits(argc, argv);
 	//int	j = check_double(argc, argv);
 	//printf("Check if num : %d\nCheck if doubles : %d\n", i, j);
 	printf("%d\n", i);

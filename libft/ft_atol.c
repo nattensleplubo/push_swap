@@ -6,13 +6,13 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 09:43:44 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/18 09:47:38 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/18 14:12:06 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atol(const char *str)
+long	ft_atol(const char *str)
 {
 	long	el_atol;
 	long	is_negative;
