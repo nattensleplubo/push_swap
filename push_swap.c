@@ -6,11 +6,22 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 09:56:40 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/21 14:01:03 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/21 14:12:02 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_choose_sort(t_list **head_a, t_list **head_b)
+{
+	int	size;
+
+	size = ft_lstsize(*head_a);
+	if (size == 2)
+		ft_sort_two(&head_a);
+	else if (size == 3)
+		ft_sort_three(&head_a);
+}
 
 int	main(int argc, char **argv)
 {
@@ -29,6 +40,7 @@ int	main(int argc, char **argv)
 			write(1, "A is sorted\n", 12);
 			return (0);
 		}
+		ft_choose_sort(&head_a, &head_b);
 	}
 	return (0);
 }
