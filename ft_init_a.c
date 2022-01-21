@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_init_a.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/17 11:13:30 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/21 13:48:54 by ngobert          ###   ########.fr       */
+/*   Created: 2022/01/21 13:28:06 by ngobert           #+#    #+#             */
+/*   Updated: 2022/01/21 13:46:46 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-#include "./libft/libft.h"
-#include "./libft/ft_printf/ft_printf.h"
-#include <limits.h>
+void	ft_init_a(int argc, char **argv, t_list **head_a)
+{
+	int		i;
+	int		val;
+	t_list	*temp;
 
-void	ft_init_a(int argc, char **argv, t_list **head_a);
-
-#endif
+	i = 1;
+	while (i < argc)
+	{
+		val = ft_atoi(argv[i]);
+		temp = ft_lstnew(val);
+		ft_lstadd_back(head_a, temp);
+		i++;
+	}
+}

@@ -6,13 +6,13 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 14:13:30 by ngobert           #+#    #+#             */
-/*   Updated: 2021/11/24 14:13:31 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/21 13:37:08 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstnew(int content)
 {
 	t_list	*dest;
 

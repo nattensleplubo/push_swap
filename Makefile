@@ -8,8 +8,8 @@ CFLAGS		=	-Wall -Wextra -Werror -I.
 
 LIB_PATH = ./libft/libft.a ./libft/ft_printf/libftprintf.a
 
-%.o: %.c
-			$(CC) $(CFLAGS) 
+%.o:%.c
+			$(CC) $(CFLAGS) $(SRCS)
 
 OBJS		=	$(SRCS:.c=.o)
 

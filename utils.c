@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/17 11:13:30 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/21 13:48:54 by ngobert          ###   ########.fr       */
+/*   Created: 2022/01/21 13:54:12 by ngobert           #+#    #+#             */
+/*   Updated: 2022/01/21 13:59:23 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-#include "./libft/libft.h"
-#include "./libft/ft_printf/ft_printf.h"
-#include <limits.h>
+int	ft_is_a_sorted(t_list **head_a)
+{
+	t_list	*one;
+	t_list	*two;
 
-void	ft_init_a(int argc, char **argv, t_list **head_a);
-
-#endif
+	one = *head_a;
+	two = *head_a;
+	two = two->next;
+	while (two)
+	{
+		if (one->content > two->content)
+			return (1);
+		one = one->next;
+		two = two->next;
+	}
+	return (0);
+}
