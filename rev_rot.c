@@ -6,8 +6,15 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 09:53:16 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/24 09:53:23 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/24 09:58:17 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	rra(t_list **head)
+{
+	if (ft_lstsize(*head) == 1)
+		return (0);
+	
+}
