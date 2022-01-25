@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_sort_low.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/24 15:50:27 by ngobert           #+#    #+#             */
-/*   Updated: 2021/11/25 09:49:50 by ngobert          ###   ########.fr       */
+/*   Created: 2022/01/25 10:24:18 by ngobert           #+#    #+#             */
+/*   Updated: 2022/01/25 13:19:08 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_sort_two(t_list **head)
 {
-	if (!del)
-		return ;
-	if (lst)
+	if ((*head)->content > (*head)->next->content)
 	{
-		(*del)(lst->content);
-		free(lst);
+		sa(head);
+		write(1, "sa\n", 3);
 	}
+	else if ((*head)->content < (*head)->next->content)
+		sb(head);
 }

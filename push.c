@@ -6,13 +6,13 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 13:36:21 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/24 15:30:15 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/25 11:53:53 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	pa(t_list **head_a, t_list **head_b)
+void	pa(t_list **head_a, t_list **head_b)
 {
 	t_list	*temp;
 	t_list	*swap;
@@ -32,7 +32,7 @@ int	pa(t_list **head_a, t_list **head_b)
 		*head_b = temp;
 }
 
-int	pb(t_list **head_a, t_list **head_b)
+void	pb(t_list **head_a, t_list **head_b)
 {
 	t_list	*temp;
 	t_list	*swap;
