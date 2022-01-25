@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 09:56:40 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/25 13:28:48 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/25 14:33:31 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	ft_choose_sort(t_list **head_a, t_list **head_b)
 	size = ft_lstsize(*head_a);
 	if (size == 2)
 		ft_sort_two(head_a);
-	//else if (size == 3)
-	//	ft_sort_three(&head_a);
+	else if (size == 3)
+		ft_sort_three(head_a);
 }
 
 int	main(int argc, char **argv)

@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 13:30:41 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/24 13:30:43 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/25 14:49:02 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ void	rra(t_list **head)
 	t_list	*tail;
 	t_list	*temp;
 	
-	i = 0;
+	i = 1;
 	size = ft_lstsize(*head);
 	tail = *head;
 	temp = ft_lstlast(*head);
+	tail = *head;
 	while (i < size - 1)
 	{
 		tail = tail->next;
@@ -31,6 +32,7 @@ void	rra(t_list **head)
 	tail->next = NULL;
 	temp->next = *head;
 	*head = temp;
+	write(1, "rra\n", 4);
 }
 
 void	rrb(t_list **head)
@@ -52,6 +54,7 @@ void	rrb(t_list **head)
 	tail->next = NULL;
 	temp->next = *head;
 	*head = temp;
+	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_list **head_a, t_list **head_b)

@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 09:53:07 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/24 09:53:09 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/25 14:46:54 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	ra(t_list **head)
 	tmp->next = change;
 	change->next = NULL;
 	*head = new;
+	write(1, "ra\n", 3);
 	return (1);
 }
 
@@ -44,6 +45,7 @@ int	rb(t_list **head)
 	change->next = NULL;
 	*head = new;
 	return (1);
+	write(1, "rb\n", 3);
 }
 
 void	rr(t_list **head_a, t_list **head_b)
