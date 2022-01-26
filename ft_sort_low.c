@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 10:24:18 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/26 14:47:59 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/26 15:13:39 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	ft_sort_two(t_list **head)
 	{
 		sa(head);
 	}
-	// else if ((*head)->content < (*head)->next->content)
-	// 	sb(head);
 }
 
 void	ft_sort_three(t_list **head)
