@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 11:13:30 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/25 14:39:27 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/26 11:26:31 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 
 void	ft_init_a(int argc, char **argv, t_list **head_a);
 int		ft_is_a_sorted(t_list **head_a);
+int		ft_get_lowest(t_list **head);
+int		ft_get_highest(t_list **head);
 
 void	sa(t_list **head_a);
 void	sb(t_list **head_b);
