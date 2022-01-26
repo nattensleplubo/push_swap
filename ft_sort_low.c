@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 10:24:18 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/26 11:10:21 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/26 14:47:59 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	ft_sort_two(t_list **head)
 	{
 		sa(head);
 	}
-	else if ((*head)->content < (*head)->next->content)
-		sb(head);
+	// else if ((*head)->content < (*head)->next->content)
+	// 	sb(head);
 }
 
 void	ft_sort_three(t_list **head)
@@ -52,9 +52,16 @@ void	ft_sort_three(t_list **head)
 
 void	ft_sort_five(t_list **head_a, t_list **head_b)
 {
-	int	i;
-	int	size;
-	
- 	size = ft_lstsize(*head_a);
-	
+	lowest_to_b(head_a, head_b);
+	lowest_to_b(head_a, head_b);
+	ft_sort_three(head_a);
+	pa(head_a, head_b);
+	pa(head_a, head_b);
+}
+
+void ft_sort_four(t_list **head_a, t_list **head_b)
+{
+	lowest_to_b(head_a, head_b);
+	ft_sort_three(head_a);
+	pa(head_a, head_b);
 }

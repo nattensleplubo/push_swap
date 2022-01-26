@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 13:54:12 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/26 11:09:48 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/26 14:09:44 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,24 +30,24 @@ int	ft_is_a_sorted(t_list **head_a)
 	return (0);
 }
 
-int	ft_get_lowest(t_list **head)
+int	ft_get_lowest(t_list *head)
 {
 	int	i[2];
 	int	low;
 
-	low = (*head)->content;
-	*i = 0;
-	while (*head)
+	low = head->content;
+	*(long *)i = 0;
+	while (head)
 	{
-		if (*head)
+		if (head)
 		{
-			if (low > (*head)->content)
+			if (low > head->content)
 			{
-				low = (*head)->content;
+				low = head->content;
 				i[1] = i[0];
 			}
 		}
-		*head = (*head)->next;
+		head = head->next;
 		i[0]++;
 	}
 	return(i[1]);

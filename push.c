@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 13:36:21 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/26 11:35:23 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/26 14:39:11 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ void	pa(t_list **head_a, t_list **head_b)
 		temp = *head_b;
 		temp = temp->next;
 	}
-	swap = *head_b;
-	swap->next = *head_a;
+	swap = (*head_b);
+	(swap)->next = *head_a;
 	*head_a = swap;
-	*head_b = NULL;
+	(*head_b) = NULL;
 	if (ft_lstsize(*head_b) <= 1)
 		*head_b = temp;
 	write(1, "pa\n", 3);
