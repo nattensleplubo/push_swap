@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 11:13:30 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/26 14:30:29 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/26 15:35:23 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	rrr(t_list **head_a, t_list **head_b);
 void	pa(t_list **head_a, t_list **head_b);
 void	pb(t_list **head_a, t_list **head_b);
 
+void	ft_radix(t_list **head_a, t_list **head_b);
 void	ft_sort_two(t_list **head);
 int		check_args(int argc, char **argv);
 void	ft_sort_three(t_list **head);
