@@ -6,58 +6,76 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 15:27:58 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/27 13:14:08 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/27 14:11:45 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	get_lowest(t_list *head)
+int	get_index(t_list *head, t_list *node)
 {
-	int	low;
+	t_list	*tmp;
+	int		ret;
 
-	low = head->content;
-	while (head)
-	{
-		if (low > head->next->content)
-			low = head->next->content;
+	tmp = head;
+	ret = 0;
+	while (head && head->content != node->content)
 		head = head->next;
+	while (tmp)
+	{
+		if (head->content > tmp->content)
+			ret++;
+		tmp = tmp->next;
 	}
-	return (low);
+	return (ret);
 }
 
-int	check_index(t_list *head)
+void	set_index(t_list **head)
 {
-	while (head)
-	{
-		if (head->index == -1)
-			return (0);
-		head = head->next;
-	}
-	return (1);
-}
+	t_list *temp;
 
-void	set_index_null(t_list *head)
-{
-	while (head)
+	temp = *head;
+	while (*head)
 	{
-		head->index = -1;
-		head = head->next;
+		(*head)->index = get_index(temp, (*head));
+		*head = (*head)->next;
 	}
-}
-
-void	set_index(t_list *head)
-{
-	int	index;
-	int	lowest;
-	int	temp;
-	
-	lowest = get_lowest(head);
+	*head = temp;
 }
 
 void	ft_radix(t_list **head_a, t_list **head_b)
 {
-	
+	int	size;
+	int	i;
+	int	j;
+	int	n;
+	int	x;
+	int	y;
+
+	size = ft_lstsize(*head_a);
+	set_index(head_a);
+	i = 0;
+	while (ft_is_list_sort(*head_a))
+	{
+		j = -1;
+		while (++j < size)
+		{
+			n = (*head_a)->index;
+			if ((n >> i) & 1)
+				ra(head_a);
+			else
+				pb(head_a, head_b);
+		}
+		x = ft_lstsize(*head_b);
+		y = 0;
+		while (!*head_b)
+		{
+			pa(head_a, head_b);
+			y++;
+		}
+		++i;
+	}
+	return ;
 }
 
 void	tri_de_merde(t_list **head_a, t_list **head_b)
