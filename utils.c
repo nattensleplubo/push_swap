@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 13:54:12 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/26 15:26:16 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/27 09:53:26 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,29 @@ int	ft_get_lowest(t_list *head)
 			if (low > head->content)
 			{
 				low = head->content;
+				i[1] = i[0];
+			}
+		}
+		head = head->next;
+		i[0]++;
+	}
+	return(i[1]);
+}
+
+int	ft_get_highest(t_list *head)
+{
+	int	i[2];
+	int	high;
+
+	high = head->content;
+	*(long *)i = 0;
+	while (head)
+	{
+		if (head)
+		{
+			if (high < head->content)
+			{
+				high = head->content;
 				i[1] = i[0];
 			}
 		}
