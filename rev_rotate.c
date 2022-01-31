@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 13:30:41 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/25 14:49:02 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/31 12:24:54 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	rra(t_list **head)
 {
-	int	i;
-	int	size;
+	int		i;
+	int		size;
 	t_list	*tail;
 	t_list	*temp;
-	
+
 	i = 1;
 	size = ft_lstsize(*head);
 	tail = *head;
@@ -37,11 +37,11 @@ void	rra(t_list **head)
 
 void	rrb(t_list **head)
 {
-	int	i;
-	int	size;
+	int		i;
+	int		size;
 	t_list	*tail;
 	t_list	*temp;
-	
+
 	i = 0;
 	size = ft_lstsize(*head);
 	tail = *head;

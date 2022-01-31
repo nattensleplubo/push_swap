@@ -6,12 +6,11 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/25 10:24:18 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/26 15:13:39 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/31 12:18:29 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#define BUG printf("HERE\n");
 
 void	ft_sort_two(t_list **head)
 {
@@ -25,7 +24,7 @@ void	ft_sort_three(t_list **head)
 {
 	int	one;
 	int	two;
-	int three;
+	int	three;
 
 	one = (*head)->content;
 	two = (*head)->next->content;
@@ -57,7 +56,7 @@ void	ft_sort_five(t_list **head_a, t_list **head_b)
 	pa(head_a, head_b);
 }
 
-void ft_sort_four(t_list **head_a, t_list **head_b)
+void	ft_sort_four(t_list **head_a, t_list **head_b)
 {
 	lowest_to_b(head_a, head_b);
 	ft_sort_three(head_a);
