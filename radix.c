@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 15:27:58 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/28 11:10:05 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/31 12:11:30 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,16 +66,12 @@ void	ft_radix(t_list **head_a, t_list **head_b)
 		}
 		n = size - ft_lstsize(*head_a);
 		j = 0;
-		printf("%d\n", n);
 		while (j < n)
 		{
-			// if (n == 0)
-			// 	break;
 			pa(head_a, head_b);
-			//ft_lstdelone(*head_b);
 			j++;
 		}
-//		ft_lstclear(head_b);
+		(*head_b) = NULL;
 		++i;
 	}
 	return ;
