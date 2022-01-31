@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 10:10:07 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/25 12:04:57 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/31 14:50:04 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,8 +99,8 @@ int	check_double(int argc, char **argv)
 int	check_args(int argc, char **argv)
 {
 	if (check_if_num(argc, argv) == -1 || check_double(argc, argv) == -1)
-		return (printf("Arguments error\n"), -1);
+		return (write(2, "Error\n", 7), -1);
 	if (check_limits(argc, argv) == -1)
-		return (printf("Arguments error\n"), -1);
+		return (write(2, "Error\n", 7), -1);
 	return (1);
 }
