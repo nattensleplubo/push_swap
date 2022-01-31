@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 09:56:40 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/31 12:16:55 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/01/31 14:05:40 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,9 @@ int	main(int argc, char **argv)
 	{
 		ft_init_a(argc, argv, &head_a);
 		if (!ft_is_a_sorted(&head_a))
-		{
-			return (0);
-		}
+			return (ft_lstclear(&head_a), 0);
 		ft_choose_sort(&head_a, &head_b);
-		ft_lstclear(&head_a);
 	}
+	ft_lstclear(&head_a);
 	return (0);
 }
