@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 09:56:40 by ngobert           #+#    #+#             */
-/*   Updated: 2022/01/31 14:05:40 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/02/01 10:19:42 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	main(int argc, char **argv)
 
 	head_a = NULL;
 	head_b = NULL;
-	if (argc < 3)
+	if (argc < 2)
 		return (0);
 	else if (check_args(argc, argv) == 1)
 	{

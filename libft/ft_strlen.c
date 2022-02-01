@@ -6,7 +6,7 @@
 /*   By: ngobert <ngobert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/09 19:50:42 by ngobert           #+#    #+#             */
-/*   Updated: 2021/10/09 22:28:09 by ngobert          ###   ########.fr       */
+/*   Updated: 2022/02/01 10:43:13 by ngobert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,13 @@
 size_t	ft_strlen(const char *s)
 {
 	int	i;
+	int	ret;
 
 	i = 0;
-	while (s[i])
+	ret = 0;
+	while (s[i] == '0' && s[i])
 		i++;
-	return (i);
+	while (s[i])
+		i += (ret++, 1);
+	return (ret);
 }
